@@ -91,7 +91,7 @@ public class Main extends Application {
                     a.getStudentGradeBook().setGradeBookNumber();
                 }
 
-                Button enrollStudentButton = new Button("Зачислить студента");
+                Button enrollStudentButton = new Button("Г‡Г Г·ГЁГ±Г«ГЁГІГј Г±ГІГіГ¤ГҐГ­ГІГ ");
                 enrollStudentButton.setStyle("-fx-background-color: #FF4500; ");
                 enrollStudentButton.setTextFill(Color.WHITE);
                 enrollStudentButton.setPrefSize(200, 75);
@@ -103,7 +103,7 @@ public class Main extends Application {
                         VBox verticalBoxLayout = new VBox(10);
                         HBox horizontalBox = new HBox(50);
                         horizontalBox.setMinWidth(200);
-                        Label studentNameLabel = new Label("Имя студента");
+                        Label studentNameLabel = new Label("Г€Г¬Гї Г±ГІГіГ¤ГҐГ­ГІГ ");
                         studentNameLabel.setFont(Font.font("Impact", FontWeight.BOLD, 14));
                         studentNameLabel.setTextFill(Color.WHITE);
                         TextField studentNameTextField = new TextField();
@@ -111,7 +111,7 @@ public class Main extends Application {
                         horizontalBox.setPadding(new Insets(10, 10, 10, 10));
                         horizontalBox.getChildren().addAll(studentNameLabel, studentNameTextField);
 
-                        Button giveGradeBookButton = new Button("Выдать зачетку");
+                        Button giveGradeBookButton = new Button("Г‚Г»Г¤Г ГІГј Г§Г Г·ГҐГІГЄГі");
                         giveGradeBookButton.setStyle("-fx-background-color: #0a9664; ");
                         giveGradeBookButton.setTextFill(Color.WHITE);
                         giveGradeBookButton.setPrefSize(390, 75);
@@ -154,7 +154,7 @@ public class Main extends Application {
                 };
                 enrollStudentButton.addEventHandler(MouseEvent.MOUSE_CLICKED, enrollStudentHandler);
 
-                Button teachersButton = new Button("Преподаватели");
+                Button teachersButton = new Button("ГЏГ°ГҐГЇГ®Г¤Г ГўГ ГІГҐГ«ГЁ");
                 teachersButton.setStyle("-fx-background-color: #0a9664; ");
                 teachersButton.setTextFill(Color.WHITE);
                 teachersButton.setPrefSize(200, 75);
@@ -205,7 +205,7 @@ public class Main extends Application {
                 HBox teacherHBox = new HBox(50);
                 teacherHBox.getChildren().addAll(teachersButton, teachersImageView);
 
-                Button studentsButton = new Button("Студенты");
+                Button studentsButton = new Button("Г‘ГІГіГ¤ГҐГ­ГІГ»");
                 studentsButton.setStyle("-fx-background-color: #0a9664; ");
                 studentsButton.setTextFill(Color.WHITE);
                 studentsButton.setPrefSize(200, 75);
@@ -346,10 +346,10 @@ public class Main extends Application {
                                 VBox studentActionBox = new VBox(20);
                                 Button[] studentActionButtons = new Button[3];
 
-                                studentActionButtons[0] = new Button("Сдать экзамен");
+                                studentActionButtons[0] = new Button("Г‘Г¤Г ГІГј ГЅГЄГ§Г Г¬ГҐГ­");
                                 studentActionButtons[0].addEventHandler(MouseEvent.MOUSE_CLICKED, passExamHandler);
 
-                                studentActionButtons[1] = new Button("Изменить данные");
+                                studentActionButtons[1] = new Button("Г€Г§Г¬ГҐГ­ГЁГІГј Г¤Г Г­Г­Г»ГҐ");
 
                                 EventHandler<MouseEvent> modifyHadler = new EventHandler<MouseEvent>() {
                                     @Override
@@ -360,17 +360,17 @@ public class Main extends Application {
                                         studentName = studentName.substring(beginning, end);
 
                                         Button[] modifyButtons = new Button[3];
-                                        modifyButtons[0] = new Button("Изменить имя");
+                                        modifyButtons[0] = new Button("Г€Г§Г¬ГҐГ­ГЁГІГј ГЁГ¬Гї");
 
                                         EventHandler<MouseEvent> modifyNameHandler = new EventHandler<MouseEvent>() {
                                             @Override
                                             public void handle(MouseEvent event) {
 
-                                                TextInputDialog dialog = new TextInputDialog("Введите новое имя");
+                                                TextInputDialog dialog = new TextInputDialog("Г‚ГўГҐГ¤ГЁГІГҐ Г­Г®ГўГ®ГҐ ГЁГ¬Гї");
 
                                                 dialog.setTitle("Name modifying");
-                                                dialog.setHeaderText("Введите имя:");
-                                                dialog.setContentText("Имя:");
+                                                dialog.setHeaderText("Г‚ГўГҐГ¤ГЁГІГҐ ГЁГ¬Гї:");
+                                                dialog.setContentText("Г€Г¬Гї:");
 
                                                 Optional<String> result = dialog.showAndWait();
 
@@ -391,16 +391,16 @@ public class Main extends Application {
                                             }
                                         };
                                         modifyButtons[0].addEventHandler(MouseEvent.MOUSE_CLICKED, modifyNameHandler);
-                                        modifyButtons[1] = new Button("Изменить номер зачетки");
+                                        modifyButtons[1] = new Button("Г€Г§Г¬ГҐГ­ГЁГІГј Г­Г®Г¬ГҐГ° Г§Г Г·ГҐГІГЄГЁ");
 
                                         EventHandler<MouseEvent> modifyGradeBookNumberHandler = new EventHandler<MouseEvent>() {
                                             @Override
                                             public void handle(MouseEvent event) {
-                                                TextInputDialog dialog = new TextInputDialog("Введите новый номер");
+                                                TextInputDialog dialog = new TextInputDialog("Г‚ГўГҐГ¤ГЁГІГҐ Г­Г®ГўГ»Г© Г­Г®Г¬ГҐГ°");
 
                                                 dialog.setTitle("Number modifying");
-                                                dialog.setHeaderText("Введите номер:");
-                                                dialog.setContentText("Номер:");
+                                                dialog.setHeaderText("Г‚ГўГҐГ¤ГЁГІГҐ Г­Г®Г¬ГҐГ°:");
+                                                dialog.setContentText("ГЌГ®Г¬ГҐГ°:");
 
                                                 Optional<String> result = dialog.showAndWait();
 
@@ -425,7 +425,7 @@ public class Main extends Application {
                                             }
                                         };
                                         modifyButtons[1].addEventHandler(MouseEvent.MOUSE_CLICKED, modifyGradeBookNumberHandler);
-                                        modifyButtons[2] = new Button("Изменить отметки");
+                                        modifyButtons[2] = new Button("Г€Г§Г¬ГҐГ­ГЁГІГј Г®ГІГ¬ГҐГІГЄГЁ");
 
 
                                         VBox verticalBoxLayout = new VBox(5);
@@ -475,7 +475,7 @@ public class Main extends Application {
                                                 verticalBoxLayout.setPadding(new Insets(5, 5, 5, 5));
                                                 verticalBoxLayout.setStyle("-fx-background-color: #001d18; ");
 
-                                                Button ApplyButton = new Button("Применить изменения");
+                                                Button ApplyButton = new Button("ГЏГ°ГЁГ¬ГҐГ­ГЁГІГј ГЁГ§Г¬ГҐГ­ГҐГ­ГЁГї");
                                                 ApplyButton.setStyle("-fx-background-color: #FF4500; ");
                                                 ApplyButton.setFont(Font.font("Impact", FontWeight.BOLD, 16));
                                                 ApplyButton.setTextFill(Color.WHITE);
@@ -516,7 +516,7 @@ public class Main extends Application {
                                                             try {
                                                                 newGrade = Integer.parseInt(textFields[i].getText());
                                                                 if (newGrade > 10 || newGrade < 0)
-                                                                    throw new NumberFormatException("Неверная отметка");
+                                                                    throw new NumberFormatException("ГЌГҐГўГҐГ°Г­Г Гї Г®ГІГ¬ГҐГІГЄГ ");
                                                             } catch (NumberFormatException exc) {
                                                                 newGrade = student.getStudentGradeBook().getSubjectGrade(subjects[i]);
                                                             }
@@ -547,7 +547,7 @@ public class Main extends Application {
                                 };
                                 studentActionButtons[1].addEventHandler(MouseEvent.MOUSE_CLICKED, modifyHadler);
 
-                                studentActionButtons[2] = new Button("Обновить данные");
+                                studentActionButtons[2] = new Button("ГЋГЎГ­Г®ГўГЁГІГј Г¤Г Г­Г­Г»ГҐ");
 
 
                                 EventHandler<MouseEvent> updateHandler = new EventHandler<MouseEvent>() {
@@ -620,7 +620,7 @@ public class Main extends Application {
                 HBox studentsHBox = new HBox(50);
                 studentsHBox.getChildren().addAll(studentsButton, studentsImageView);
 
-                Button engineerButton = new Button("Инженеры");
+                Button engineerButton = new Button("Г€Г­Г¦ГҐГ­ГҐГ°Г»");
                 engineerButton.setStyle("-fx-background-color: #0a9664; ");
                 engineerButton.setTextFill(Color.WHITE);
                 engineerButton.setPrefSize(200, 75);
